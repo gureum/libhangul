@@ -912,6 +912,13 @@ static bool
 hangul_ic_process_gureum(HangulInputContext *hic, ucschar ch)
 {
     ucschar mode_key = hangul_keyboard_get_mode_key(hic->keyboard);
+    if (hic->buffer.choseong == 0) {
+        if (ch == 0x1171) {
+            ch = 0x27;
+        } else if (ch == 0x116c) {
+            ch = 0x2f;
+        }
+    }
 
     if (hangul_is_choseong(ch)) {
         if (hic->buffer.choseong == 0) {

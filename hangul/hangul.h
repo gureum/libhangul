@@ -106,7 +106,7 @@ HangulKeyboard* hangul_keyboard_new_from_file(const char* path);
 void    hangul_keyboard_delete(HangulKeyboard *keyboard);
 void    hangul_keyboard_set_type(HangulKeyboard *keyboard, int type);
 void    hangul_keyboard_set_mode_key(HangulKeyboard *keyboard, ucschar key);
-ucschar    hangul_keyboard_get_mode_key(HangulKeyboard *keyboard);
+ucschar    hangul_keyboard_get_mode_key(const HangulKeyboard *keyboard);
 
 unsigned int hangul_keyboard_list_get_count(void);
 const char* hangul_keyboard_list_get_keyboard_id(unsigned index_);

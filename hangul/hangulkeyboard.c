@@ -513,7 +513,7 @@ hangul_keyboard_set_mode_key(HangulKeyboard *keyboard, ucschar key)
 }
 
 ucschar
-hangul_keyboard_get_mode_key(HangulKeyboard *keyboard)
+hangul_keyboard_get_mode_key(const HangulKeyboard *keyboard)
 {
     return keyboard->mode_key;
 }
